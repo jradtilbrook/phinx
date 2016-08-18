@@ -392,7 +392,7 @@ class Manager
             // Get the migration before the last run migration
             $prev = count($versions) - 2;
             $version =  $prev < 0 ? 0 : $versions[$prev];
-        } elseif ($version === 'all' || $version === '0') {
+        } elseif ($version === 'all' || $version == 0) {
             $version = 0;
         } else {
             // Array of migration names
